@@ -1,6 +1,6 @@
 # COVID-19 in Malaysia
 
-Data taken from the [Official Malaysia's COVID-19 data](https://github.com/MoH-Malaysia/covid19-public) as of **11-09-2021**
+Data taken from the [Official Malaysia's COVID-19 data](https://github.com/MoH-Malaysia/covid19-public) as of [`11-09-2021`](https://github.com/MoH-Malaysia/covid19-public/commit/a9d2a11512d0943db02140a03486f6862df87107)
 
 ## Interested Data
 
