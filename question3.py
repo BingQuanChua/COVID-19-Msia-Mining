@@ -16,7 +16,6 @@ def main():
     tests_malaysia = pd.read_csv('dataset/cases_and_testing/tests_malaysia.csv')
     tests_state = pd.read_csv('dataset/cases_and_testing/tests_state.csv')
 
-
     # Sidebar
     st.sidebar.header("Select a Dataset")
     datasets = {
@@ -52,6 +51,6 @@ def main():
     else:
         st.write("There are no missing values in this dataset")
 
-
+    
 if __name__ == "__main__":
     main()
