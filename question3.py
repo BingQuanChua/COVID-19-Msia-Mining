@@ -182,10 +182,34 @@ def main():
     st.write("# 4. Classification and Regression")
 
     st.markdown("Problem Statement: Comparing classification and regression model to determine which model perform well in daily cases for Pahang, Kedah, Johor and Selangor")
-
-    st.markdown('For classification, models we will use are K-Nearest Neighbors Classifier, Naive Bayes Clasifier,Decision Tree Classifier and Random Forest Classifier. We divide our target variale to three classes according to binning, which are high, moderate and low daily new cases. For regression, models we will use are Linear Regression, Decision Tree Regressor, Random Forest Regressor and Support Vector Regressor')
+    st.markdown("""
+    Regression models that will be used:\n
+    1. Linear Regression\n
+    2. Decision Tree Regressor\n
+    3. Random Forest Regressor\n
+    4. Support Vector Regressor\n
+    \n
+    Evaluation matrics that will be used:\n
+    1. R Square\n
+    2. Mean Absolute Error(MAE)\n
+    3. Root Mean Square Error(RMSE)\n
+    """)
 
     st.write("## 4.1 Classification")
+
+    st.markdown('For classification, we categorize our target variale to three classes using binning, which are high, moderate and low daily new cases. ')
+
+    st.markdown("""
+    Applying SMOTE to balance the training dataset.\n
+
+    SMOTE helps oversample minority classes in our data. In our case, low and moderate the minorities in cases_new_binned. We will apply SMOTE to our training data before fitting into a model. This helps balance the class distribution during the training but not giving any additional information. SMOTE should only be applied to the training dataset (not testing/validation set).\n
+
+    If SMOTE is implemented prior to the train-test splitting, some of the synthetic data might end up in the testing/validation set, allowing the model to perform well at the moment. However, the model will underperform in production as it overfits to most of our synthetic data.\n
+
+    References:
+    [SMOTE for Imbalanced Classification with Python](https://machinelearningmastery.com/smote-oversampling-for-imbalanced-classification/#:~:text=This%20can%20be%20achieved%20by%20simply%20duplicating%20examples%20from%20the%20minority%20class%20in%20the%20training%20dataset%20prior%20to%20fitting%20a%20model.%20This%20can%20balance%20the%20class%20distribution%20but%20does%20not%20provide%20any%20additional%20information%20to%20the%20model.)
+
+    """)
 
     im = Image.open('img/confusion1.png')  
     st.image(im,width=1000, caption='')
