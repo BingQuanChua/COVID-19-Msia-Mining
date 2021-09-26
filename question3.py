@@ -145,7 +145,7 @@ def main():
 
     st.write('For this questions we have to determine featuresa that correlated to daily cases(cases_new) of Pahang, Kedah, Johor and Selangor. To get the results, we will using Correlation Heatmap and Feature Importance method to calculate the correlation score between each variables and target variables(cases_news)')
 
-    st.subheader("Correlation Heatmap")
+    st.write("## 3.1 Correlation Heatmap")
 
     st.write("Correlation heatmap is a graphical representation of correlation matrix that representing correlation between different variables.")
     st.write("""According to the heatmaps above, we could determine strong features to cases_new for Penang, Kedah, Johor and Selangor.
@@ -175,7 +175,7 @@ def main():
         im = Image.open('img/Selangor_f.png')
         st.image(im, width=700, caption='Heatmap for Selangor')
 
-    st.write('Feature Importance Method')
+    st.write('## 3.2 Feature Importance Method')
     st.write('Next, we will using the Feature Importance Method to determine the strong features to daily cases. Feature Importance will assign a score to each of the variables according to how they useful for predicting target variable. If a feature get higher score, which mean it is stronger to daily cases')
 
     # Question 4
@@ -230,7 +230,7 @@ def main():
 
     st.write("## 4.2 Regression")
 
-    im = Image.open('regression.png')
+    im = Image.open('img/regression.png')
     st.image(im, width=1200, caption = 'Regression Model Evaluation')
 
     st.markdown('R Square values ranges from 0 to 1. The higher value of R Square indicates that the model fits the data better. On the other hand, both MAE and RMSE ranges from 0 to  ∞ , and lower values are preferred.In our case, the R Square values of all 4 regressor are very close to 1. However, their MAE and RMSE are very high. We would consider Decision Tree and Random Forest as better regressors in this case as their R Square is higher and the errors are relatively lower than others.')
