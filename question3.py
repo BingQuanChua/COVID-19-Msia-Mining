@@ -8,18 +8,21 @@ from PIL import Image
 
 
 def main():
+
+    st.set_page_config(layout="wide")
+
     st.header("""
         COVID-19 Malaysia, A Data Mining Approach
     """)
 
     # Import cases and testing data set
-    cases_malaysia = pd.read_csv(
-        'dataset/cases_and_testing/cases_malaysia.csv')
+    cases_malaysia = pd.read_csv('dataset/cases_and_testing/cases_malaysia.csv')
     cases_state = pd.read_csv('dataset/cases_and_testing/cases_state.csv')
     clusters = pd.read_csv('dataset/cases_and_testing/clusters.csv')
-    tests_malaysia = pd.read_csv(
-        'dataset/cases_and_testing/tests_malaysia.csv')
+    tests_malaysia = pd.read_csv('dataset/cases_and_testing/tests_malaysia.csv')
     tests_state = pd.read_csv('dataset/cases_and_testing/tests_state.csv')
+    deaths_malaysia = pd.read_csv('dataset/deaths/deaths_malaysia.csv')
+    deaths_state = pd.read_csv('dataset/deaths/deaths_state.csv')
 
     # Sidebar
     st.sidebar.header("Table of Content")
@@ -32,11 +35,10 @@ def main():
     st.write("""
         This project aims to use data mining techniques to gain some insight from 
         \"[Open Data on COVID-19 in Malaysia](https://github.com/MoH-Malaysia/covid19-public)\" by Ministry of Health (MOH), Malaysia. 
-        After detailed analysis, our project will be focusing on data from \"**Cases and Testing**\".
+        After detailed analysis, our project will be focusing on data from \"**Cases and Testing**\" and \"**Deaths**\".
         """)
-
+    
     # Question 1
-    st.write("#Q1")
     st.write("""
         # 1. Exploratory Data Analysis
     """)
@@ -51,10 +53,12 @@ def main():
         'cases_state.csv': cases_state,
         'tests_malaysia.csv': tests_malaysia,
         'tests_state.csv': tests_state,
-        'clusters.csv': clusters
+        'clusters.csv': clusters,
+        'deaths_malaysia.csv': deaths_malaysia,
+        'deaths_state.csv': deaths_state
     }
     selected_dataset = st.selectbox(
-        "Cases and Testing", [key for key in datasets])
+        "Dataset selection", [key for key in datasets])
 
     df = datasets.get(selected_dataset)
 
@@ -120,7 +124,7 @@ def main():
         # """)
 
     # Question 2
-    st.write("# 2 Correlation Analysis")
+    st.write("# 2. Correlation Analysis")
     st.markdown("Problem Statement: What are the states that exhibit strong correlation with Pahang and Johor?")
 
     st.markdown("To find the states that correlated to Johor and Pahang, we will use correlation heatmap. If the correlation score between that state and cases_new of Johor or Pahang higher, the correlation between both states are stronger")
