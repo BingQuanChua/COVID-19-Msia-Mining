@@ -11,7 +11,7 @@ def main():
 
     st.set_page_config(layout="wide")
 
-    st.header("""
+    st.title("""
         COVID-19 Malaysia, A Data Mining Approach
     """)
 
@@ -127,7 +127,7 @@ def main():
     st.write("# 2. Correlation Analysis")
     st.markdown("Problem Statement: What are the states that exhibit strong correlation with Pahang and Johor?")
 
-    st.markdown("To find the states that correlated to Johor and Pahang, we will use correlation heatmap. If the correlation score between that state and cases_new of Johor or Pahang higher, the correlation between both states are stronger")
+    st.markdown("To find the states that correlated to Johor and Pahang, we will use correlation heatmap. If the correlation score between that state and `cases_new` of Johor or Pahang higher, the correlation between both states are stronger")
 
     stateQ2 = ["--- select a state ---", "Pahang", "Johor"]
 
@@ -145,18 +145,20 @@ def main():
     st.write("""
         # 3. Strong Features and Indicators
     """)
-    st.write("Problem Statement: What are the strong features to daily cases for Pahang, Kedah,Johor, and Selangor?")
+    st.write("Problem Statement: What are the strong features to daily cases for Pahang, Kedah, Johor, and Selangor?")
 
-    st.write('For this questions we have to determine featuresa that correlated to daily cases(cases_new) of Pahang, Kedah, Johor and Selangor. To get the results, we will using Correlation Heatmap and Feature Importance method to calculate the correlation score between each variables and target variables(cases_news)')
+    st.write('For this questions we have to determine featuresa that correlated to daily cases(`cases_new`) of Pahang, Kedah, Johor and Selangor. To get the results, we will using Correlation Heatmap and Feature Importance method to calculate the correlation score between each variables and target variables(`cases_new`)')
 
     st.write("## 3.1 Correlation Heatmap")
 
     st.write("Correlation heatmap is a graphical representation of correlation matrix that representing correlation between different variables.")
-    st.write("""According to the heatmaps above, we could determine strong features to cases_new for Penang, Kedah, Johor and Selangor.
-    If the value of the correlation score is higher or color of that is brighter, Fthat variable is stronger to cases_new.For i) Penang, variable cases_recovered has highest correlation which is 0.67. 
-    For ii) Kedah, there are 3 variables has high correlation to daily cases, which are cases_recovered, rfk_ag and pcr three of them get around 80 of correlation scores. 
-    For iii) Johor, we found total 5 variables are highly correlated to daily cases. Five of them are cases_recovered, rtk_ag, pcr, deaths_new and deaths_new_dod. Five of them got 80%% above of correlation scores. 
-    Finally, for iv) Selangor, similar like Pahang, each of the variables did not showns very high correlation score to cases_new. The variable deaths_new_dod got the highest correlation score which is 0.62.
+    st.markdown("""
+    According to the heatmaps above, we could determine strong features to cases_new for Penang, Kedah, Johor and Selangor. If the value of the correlation score is higher or color of that is brighter, that variable is stronger to `cases_new`.  
+
+    For i) **Penang**, variable `cases_recovered` has highest correlation which is 0.67.  
+    For ii) **Kedah**, there are 3 variables has high correlation to daily cases, which are `cases_recovered`, `rfk_ag` and `pcr` three of them get around 80 of correlation scores.  
+    For iii) **Johor**, we found total 5 variables are highly correlated to daily cases. Five of them are `cases_recovered`, `rtk_ag`, `pcr`, `deaths_new` and `deaths_new_dod`. Five of them got 80% above of correlation scores.  
+    Finally, for iv) **Selangor**, similar like Pahang, each of the variables did not showns very high correlation score to `cases_new`. The variable `deaths_new_dod` got the highest correlation score which is 0.62.
     """)
 
     stateQ3 = ["--- select a state ---", "Pahang", "Kedah", "Johor", "Selangor"]
@@ -180,10 +182,17 @@ def main():
         st.image(im, width=700, caption='Heatmap for Selangor')
 
     st.write('## 3.2 Feature Importance Method')
-    st.write('Next, we will using the Feature Importance Method to determine the strong features to daily cases. Feature Importance will assign a score to each of the variables according to how they useful for predicting target variable. If a feature get higher score, which mean it is stronger to daily cases')
-    st.write("The algorithms used for our feature importance are")
-    st.write("1. Decision Tree Regression")
-    st.write("2. Random Forest Regression")
+    st.write('Next, we will using the Feature Importance Method to determine the strong features to daily cases. Feature Importance will assign a score to each of the variables according to how they useful for predicting target variable. If a feature get higher score, which mean it is stronger to daily cases.')
+    st.markdown("""
+    The algorithms used for our feature importance are:  
+    1. Decision Tree Regression  
+    2. Random Forest Regression
+
+    For i) **Pahang**, it is shown that the feature importance for Decision Tree and Random Forest Regression are the almost same. The strongest feature to Pahang's daily cases is `cases_recovered`, followed by `pcr` and `rtk-ag`.  
+    ii) **Kedah** has only one strong feature for its daily cases, which is `cases_recovered`.  
+    Unlike Pahang and Kedah, iii) **Johor** has a different set of features affecting its daily cases under different regressors. Using a Decision Tree Regressor, it is shown that the top 3 features are `deaths_new`, `cases_recovered` and `rtk-ag`. On the other hand, while using a Random Forest Regressor, the top 3 features are `deaths_new_dod`, `cases_recovered`, `rtk-ag`.  
+    Finally for iv) **Selangor**, the Decision Tree Regressor shows the top features for its daily cases are `cases_recovered`, `deaths_new_dod`. The results are also the same from Random Forest Regressor.
+    """)
 
     stateQ3b = ["--- select a state ---", "Pahang", "Kedah", "Johor", "Selangor"]
 
@@ -323,23 +332,45 @@ def main():
 
 
     # Question 4
-    st.write("# 4. Classification and Regression")
+    st.write("# 4. Regression and Classification")
 
-    st.markdown("Problem Statement: Comparing classification and regression model to determine which model perform well in daily cases for Pahang, Kedah, Johor and Selangor")
+    st.markdown("Problem Statement: Comparing regression and classification models to determine which model perform well in daily cases for Pahang, Kedah, Johor and Selangor")
+    
+    st.write("## 4.1 Regression")
+
     st.markdown("""
-    Regression models that will be used:\n
-    1. Linear Regression\n
-    2. Decision Tree Regressor\n
-    3. Random Forest Regressor\n
-    4. Support Vector Regressor\n
-    \n
-    Evaluation matrics that will be used:\n
-    1. R Square\n
-    2. Mean Absolute Error(MAE)\n
-    3. Root Mean Square Error(RMSE)\n
+    Regression models that was used:  
+    1. Linear Regression  
+    2. Decision Tree Regressor  
+    3. Random Forest Regressor  
+    4. Support Vector Regressor  
+    
+    Evaluation matrics that was used:  
+    1. R Square  
+    2. Mean Absolute Error(MAE)  
+    3. Root Mean Square Error(RMSE)  
     """)
 
-    st.write("## 4.1 Classification")
+    im = Image.open('img/regression.png')
+    st.image(im, width=700, caption = 'Regression Model Evaluation')
+
+    st.markdown('R Square values ranges from 0 to 1. The higher value of R Square indicates that the model fits the data better. On the other hand, both MAE and RMSE ranges from 0 to  ∞ , and lower values are preferred. In our case, the R Square values of all 4 regressor are very close to 1. However, their MAE and RMSE are very high. We would consider **Decision Tree** and **Random Forest** as better regressors in this case as their R Square is higher and the errors are relatively lower than others.')
+    
+
+    st.write("## 4.2 Classification")
+
+    st.markdown("""
+    Classification models that was used:  
+    1. K-Nearest Neighbors Classifier  
+    2. Naive Bayes Classifier  
+    3. Decision Tree Classifier  
+    4. Random Forest Classifier  
+
+    Performance evaluation metrics that was used:    
+    1. Confusion Matrix  
+    2. Precision, Recall, F1-score  
+    3. ROC Curve  
+    """)
 
     st.markdown('For classification, we categorize our target variale to three classes using binning, which are high, moderate and low daily new cases. ')
 
@@ -370,15 +401,7 @@ def main():
     im = Image.open('img/ROC.png')
     st.image(im, width=800, caption = 'ROC curve')
 
-    st.markdown('For classification model, the evaluation matrix we used are Confusion Matrix, precision, recall, F1-score and ROC curve. According to the evaluation matrix above, it is shown that our best model for classifying the daily cases for Pahang, Kedah, Johor and Selangor is the Random Forest Classifier, following up by KNN and Decision Tree. The Naive Bayes Classifier performs the poorest in this case.')
-
-    st.write("## 4.2 Regression")
-
-    im = Image.open('img/regression.png')
-    st.image(im, width=700, caption = 'Regression Model Evaluation')
-
-    st.markdown('R Square values ranges from 0 to 1. The higher value of R Square indicates that the model fits the data better. On the other hand, both MAE and RMSE ranges from 0 to  ∞ , and lower values are preferred.In our case, the R Square values of all 4 regressor are very close to 1. However, their MAE and RMSE are very high. We would consider Decision Tree and Random Forest as better regressors in this case as their R Square is higher and the errors are relatively lower than others.')
-
+    st.markdown('For classification model, the evaluation matrix we used are Confusion Matrix, precision, recall, F1-score and ROC curve. According to the evaluation matrix above, it is shown that our best model for classifying the daily cases for Pahang, Kedah, Johor and Selangor is the **Random Forest Classifier**, following up by **KNN** and Decision Tree. The Naive Bayes Classifier performs the poorest in this case.')
 
 if __name__ == "__main__":
     main()
