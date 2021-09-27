@@ -178,7 +178,7 @@ def main():
         st.image(im, width=700, caption='Heatmap for Johor')
 
     elif selected_stateQ3 == "Selangor":
-        im = Image.open('img/Selangor_f.png')
+        im = Image.open('img/selangor_f.png')
         st.image(im, width=700, caption='Heatmap for Selangor')
 
     st.write('## 3.2 Feature Importance Method')
