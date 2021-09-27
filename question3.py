@@ -351,7 +351,7 @@ def main():
     3. Root Mean Square Error(RMSE)  
     """)
 
-    im = Image.open('img/regression.png')
+    im = Image.open('img/regression.PNG')
     st.image(im, width=700, caption = 'Regression Model Evaluation')
 
     st.markdown('R Square values ranges from 0 to 1. The higher value of R Square indicates that the model fits the data better. On the other hand, both MAE and RMSE ranges from 0 to  ∞ , and lower values are preferred. In our case, the R Square values of all 4 regressor are very close to 1. However, their MAE and RMSE are very high. We would consider **Decision Tree** and **Random Forest** as better regressors in this case as their R Square is higher and the errors are relatively lower than others.')
