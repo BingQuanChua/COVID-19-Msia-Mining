@@ -137,7 +137,7 @@ def main():
         im = Image.open('img/Pahang_state.png')
         st.image(im,width=1000, caption='Heatmap for Pahang with other states')
     elif selected_stateQ3 == "Johor":
-        im = Image.open('img/Johor_state.png')
+        im = Image.open('img/johor_state.png')
         st.image(im,width=1000, caption='Heatmap for Johor with other states')
 
 
