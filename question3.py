@@ -200,15 +200,15 @@ def main():
 
     if selected_stateQ3b == "Pahang":
         st.write("""
-        *Decision Tree Regression* Feature Importance for Pahang\n
-        cases_import 0.04511602026722506\n
-        cases_recovered 0.5360548216702808\n
-        deaths_bid 0.06162983722921824\n
-        deaths_bid_dod 0.02973137344102241\n
-        deaths_new 0.08202430683380657\n
-        deaths_new_dod 0.07151403069456355\n
-        pcr 0.05221738887632135\n
-        rtk-ag 0.12171222098756189\n
+        *Decision Tree Regression* Feature Importance for Pahang  
+        `cases_import` 0.0451  
+        `cases_recovered` 0.5361  
+        `deaths_bid` 0.0616  
+        `deaths_bid_dod` 0.0297  
+        `deaths_new` 0.0820  
+        `deaths_new_dod` 0.0715  
+        `pcr` 0.0522  
+        `rtk-ag` 0.1217  
         """)
         im = Image.open('img/FI_Pahang_DTR.png')
         st.image(im, width=700, caption='')
@@ -216,15 +216,15 @@ def main():
         st.image(im, width=700, caption='')
 
         st.write("""
-        Random Forest Regression Feature Importance for Pahang\n
-        cases_import 0.01723921010897433\n
-        cases_recovered 0.6276390087273518\n
-        deaths_bid 0.015491471589392309\n
-        deaths_bid_dod 0.010938141951370915\n
-        deaths_new 0.03467304155907633\n
-        deaths_new_dod 0.04830340135894632\n
-        pcr 0.11529903225639324\n
-        rtk-ag 0.13041669244849488\n
+        Random Forest Regression Feature Importance for Pahang  
+        `cases_import` 0.0172  
+        `cases_recovered` 0.6276  
+        `deaths_bid` 0.0155  
+        `deaths_bid_dod` 0.0109  
+        `deaths_new` 0.0347  
+        `deaths_new_dod` 0.0483  
+        `pcr` 0.1153  
+        `rtk-ag` 0.1304  
         """)        
         im = Image.open('img/FI_Pahang_RFR.png')
         st.image(im, width=700, caption='')
@@ -233,15 +233,15 @@ def main():
 
     elif selected_stateQ3b == "Kedah":
         st.write("""
-        Decision Tree Regression Feature Importance for Kedah\n
-        cases_import 0.0\n
-        cases_recovered 0.8311860951915561\n
-        deaths_bid 0.002459136208146091\n
-        deaths_bid_dod 0.021386564796206917\n
-        deaths_new 0.016309891129043633\n
-        deaths_new_dod 0.06496135863151967\n
-        pcr 0.03636748049051394\n
-        rtk-ag 0.02732947355301361\n
+        Decision Tree Regression Feature Importance for Kedah  
+        `cases_import` 0.0  
+        `cases_recovered` 0.8312  
+        `deaths_bid` 0.0025  
+        `deaths_bid_dod` 0.0214  
+        `deaths_new` 0.0163  
+        `deaths_new_dod` 0.0650  
+        `pcr` 0.0364  
+        `rtk-ag` 0.0273  
         """)        
         im = Image.open('img/FI_Kedah_DTR.png')
         st.image(im, width=700, caption='')
@@ -249,15 +249,15 @@ def main():
         st.image(im, width=700, caption='')
 
         st.write("""
-        Random Forest Regression Feature Importance for Kedah\n
-        cases_import 7.081645824801608e-05\n
-        cases_recovered 0.7551162305892843\n
-        deaths_bid 0.0010360153993133603\n
-        deaths_bid_dod 0.011088899076453308\n
-        deaths_new 0.030544648480122102\n
-        deaths_new_dod 0.05196528770787843\n
-        pcr 0.04930299217059195\n
-        rtk-ag 0.10087511011810854\n
+        Random Forest Regression Feature Importance for Kedah  
+        `cases_import` 0.0001  
+        `cases_recovered` 0.7551  
+        `deaths_bid` 0.0010  
+        `deaths_bid_dod` 0.0111  
+        `deaths_new` 0.0305  
+        `deaths_new_dod` 0.0520  
+        `pcr` 0.0493  
+        `rtk-ag` 0.1009  
         """)        
         im = Image.open('img/FI_Kedah_RFR.png')
         st.image(im, width=700, caption='')
@@ -266,15 +266,15 @@ def main():
 
     elif selected_stateQ3b == "Johor":
         st.write("""
-        Decision Tree Regression Feature Importance for Johor\n
-        cases_import 0.0005497956300280646\n
-        cases_recovered 0.14731250440997815\n
-        deaths_bid 0.06772418384277851\n
-        deaths_bid_dod 0.03279485958535056\n
-        deaths_new 0.023604470301506166\n
-        deaths_new_dod 0.6901827555148919\n
-        pcr 0.022834914516777865\n
-        rtk-ag 0.014996516198688813\n
+        Decision Tree Regression Feature Importance for Johor  
+        `cases_import` 0.0005  
+        `cases_recovered` 0.1473  
+        `deaths_bid` 0.0677  
+        `deaths_bid_dod` 0.0328  
+        `deaths_new` 0.0236  
+        `deaths_new_dod` 0.6902  
+        `pcr` 0.0228  
+        `rtk-ag` 0.0150  
         """)        
         im = Image.open('img/FI_Johor_DTR.png')
         st.image(im, width=700, caption='')
@@ -282,15 +282,15 @@ def main():
         st.image(im, width=700, caption='')
 
         st.write("""
-        Random Forest Regression Feature Importance for Johor\n
-        cases_import 0.0026314469176732425\n
-        cases_recovered 0.24305102322241612\n
-        deaths_bid 0.026321666662441533\n
-        deaths_bid_dod 0.025996740667788076\n
-        deaths_new 0.10272266630182862\n
-        deaths_new_dod 0.2742556347774977\n
-        pcr 0.0948067529687426\n
-        rtk-ag 0.2302140684816121\n
+        Random Forest Regression Feature Importance for Johor  
+        `cases_import` 0.0026  
+        `cases_recovered` 0.2431  
+        `deaths_bid` 0.0263  
+        `deaths_bid_dod` 0.0260  
+        `deaths_new` 0.1027  
+        `deaths_new_dod` 0.2743  
+        `pcr` 0.0948  
+        `rtk-ag` 0.2302  
         """)        
         im = Image.open('img/FI_Johor_RFR.png')
         st.image(im, width=700, caption='')
@@ -299,15 +299,15 @@ def main():
 
     elif selected_stateQ3b == "Selangor":
         st.write("""
-        Decision Tree Regression Feature Importance for Selangor\n
-        cases_import 0.008468007809660056\n
-        cases_recovered 0.42881779977251544\n
-        deaths_bid 0.006346634965632681\n
-        deaths_bid_dod 0.048048194907221224\n
-        deaths_new 0.06665286277682352\n
-        deaths_new_dod 0.41192766697951727\n
-        pcr 0.01635994548068081\n
-        rtk-ag 0.013378887307949033\n
+        Decision Tree Regression Feature Importance for Selangor  
+        `cases_import` 0.0085  
+        `cases_recovered` 0.4288  
+        `deaths_bid` 0.0063  
+        `deaths_bid_dod` 0.0480  
+        `deaths_new` 0.0667  
+        `deaths_new_dod` 0.4119  
+        `pcr` 0.0164  
+        `rtk-ag` 0.0134  
         """)        
         im = Image.open('img/FI_Selangor_DTR.png')
         st.image(im, width=700, caption='')
@@ -315,15 +315,15 @@ def main():
         st.image(im, width=700, caption='')
 
         st.write("""
-        Random Forest Regression Feature Importance for Selangor\n
-        cases_import 0.015008221072619217\n
-        cases_recovered 0.2985571519905454\n
-        deaths_bid 0.02338748881150938\n
-        deaths_bid_dod 0.15667795778602508\n
-        deaths_new 0.05389411924171667\n
-        deaths_new_dod 0.34830486533896327\n
-        pcr 0.06235003696542771\n
-        rtk-ag 0.041820158793193396\n
+        Random Forest Regression Feature Importance for Selangor  
+        `cases_import` 0.0150  
+        `cases_recovered` 0.2986  
+        `deaths_bid` 0.0234  
+        `deaths_bid_dod` 0.1567  
+        `deaths_new` 0.0539  
+        `deaths_new_dod` 0.3483  
+        `pcr` 0.0624  
+        `rtk-ag` 0.0418  
         """)        
         im = Image.open('img/FI_Selangor_RFR.png')
         st.image(im, width=700, caption='')
