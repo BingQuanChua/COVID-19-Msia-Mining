@@ -1,8 +1,8 @@
 # COVID-19 in Malaysia
 
-Data taken from the [Official Malaysia's COVID-19 data](https://github.com/MoH-Malaysia/covid19-public) as of [`11-09-2021`](https://github.com/MoH-Malaysia/covid19-public/commit/a9d2a11512d0943db02140a03486f6862df87107)
+## 📚Dataset
 
-## Interested Data
+Data taken from the [Official Malaysia's COVID-19 data](https://github.com/MoH-Malaysia/covid19-public) as of [`11-09-2021`](https://github.com/MoH-Malaysia/covid19-public/commit/a9d2a11512d0943db02140a03486f6862df87107)
 
 ### Cases and Testing
 
@@ -26,3 +26,13 @@ Data taken from the [Official Malaysia's COVID-19 data](https://github.com/MoH-M
 ### Static data
 
 1. [`population.csv`](https://github.com/MoH-Malaysia/covid19-public/blob/main/static/population.csv): Total, adult (≥18), and elderly (≥60) population at state level.
+
+## 💻Deployment
+
+Our results are deployed on Heroku in the form of a Streamlit webapp.
+
+Check out our project hosted on <a href="covid-19-msia-mining.herokuapp.com/" target="_blank">Heroku</a>! 
+
+## 🔭Future Extensions
+
+Checkout [COVID-19 Malaysia Cases and Vaccination](https://github.com/BingQuanChua/COVID-19-Msia-Cases-And-Vaccination)!
